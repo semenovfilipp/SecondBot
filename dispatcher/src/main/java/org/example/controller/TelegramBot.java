@@ -12,6 +12,7 @@ import org.telegram.telegrambots.meta.exceptions.TelegramApiException;
 
 import javax.annotation.PostConstruct;
 
+
 @Log4j
 @Component
 public class TelegramBot extends TelegramLongPollingBot {
@@ -45,7 +46,7 @@ public class TelegramBot extends TelegramLongPollingBot {
 
     @Override
     public void onUpdateReceived(Update update) {
-        updateController.proccessUpdate(update);
+        updateController.processUpdate(update);
 
     }
     public void sendAnswerMessage(SendMessage message){
